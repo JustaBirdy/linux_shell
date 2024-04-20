@@ -11,5 +11,16 @@
 11. ${#str_variable} 获取字符串变量长度
 12. echo `expr length "${str_variable}"` 获取字符串变量长度
 13. echo `expr index "${str_variable}" a` 获取字符a在变量中的第一个索引
-14. array_variable=(1 2 3 4 5) 创建数组变量, ${array_variable[0]} 读取索引为0的元素，${array_variable[@]} 读取所有元素
-15. 
+14. array_variable=(1 2 3 4 5) 创建数组变量
+15. ${array_variable[0]} 读取索引为0的元素，${array_variable[@]} 读取所有元素
+16. ${#array_variable[@]} 获取数组长度
+17. ./shell.sh 1 2 向shell传递参数1和2， shell文件内使用$1,$2来调用第一个与第二个参数，$0为shell文件名
+18. declare -A site=(["age"]=24 ["gender"]="male" ["height"]=178) 创建关联数组
+19. echo ${!site[@]} 打印关联数组所有的键
+20. `expr 1 + 1` 使用expr进行基本运算，运算符可以是+ - \* / %，注意乘法需要加转义符号
+21. 布尔运算：[ $a == $b ], [ $a != $b ]
+22. 关系运算符：[ $a -eq $b ],返回布尔值，可以是相等-eq，不相等-ne，大于-gt，小于-lt，大于等于-ge，小于等于-le
+23. 布尔运算符：[ $a -lt 100 -a $b -gt 15 ] !非运算，-o或运算，-a与运算
+24. 逻辑运算符：[[ $a -lt 100 && $b -gt 100 ]] &&与，||或
+25. 字符串运算符：[ -z $a ]检查长度是否为0，[ -n $a ]检查长度是否不为零，[ $a ]检查字符串是否不为空
+26. 
