@@ -1,0 +1,15 @@
+1. chmod +rwx filename 改变文件权限:可读写执行
+2. vim filename 创建文件，按i进入编辑模式 esc + :q 退出， esc + :w 写入， esc + :wq 写入后退出
+3. mkdir foldername 创建文件夹
+4. rm filename 删除文件
+5. mv oldfilename newfilename 改变文件名及扩展名
+6. variablename="a" 创建变量，=号两边不能有空格
+7. ${variablename} 使用变量，花括号可加可不加
+8. readonly variablename 将变量设置为只读变量
+9. unset variablename 删除变量，不可删除只读变量
+10. 使用双引号创建的字符串变量中可加变量，单引号的则不可以 "my name is ${my_name}"
+11. ${#str_variable} 获取字符串变量长度
+12. echo `expr length "${str_variable}"` 获取字符串变量长度
+13. echo `expr index "${str_variable}" a` 获取字符a在变量中的第一个索引
+14. array_variable=(1 2 3 4 5) 创建数组变量, ${array_variable[0]} 读取索引为0的元素，${array_variable[@]} 读取所有元素
+15. 
